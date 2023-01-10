@@ -1,5 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+
 html, body {
   height: 100%;
+  font-family:Garamond, Georgia, serif;
 }
 
 li {
@@ -36,17 +39,21 @@ li {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img-thumbnail {
+  max-height: 18rem;
 }
 
-.about-text {
+.about-text,
+.randomItemTitle {
   text-align: left;
+}
+
+.randomImage {
+    max-width: 60%;
+    margin: 0px auto;
+}
+.randomImage img {
+  max-width: 100%;
 }
 
 resume-container.container {
@@ -58,7 +65,16 @@ resume-container.container {
   width: 75vh;
 }
 
-.nav-Container, .toggleButton {
+.nav-Container {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.footer {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+.footer .btn {
+  padding: 0px 10px;
 }

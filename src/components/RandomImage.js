@@ -7,10 +7,12 @@ const images = importAll(require.context('../assets/images/', false, /\.(png|jpe
 function RandomImage() {
 
   let randomItem = images[Math.floor(Math.random()*images.length)];
+  let randomItemTitle = randomItem.match(/media\/(.*?)\./)[1];
 
   return (
-    <div>
-    <img src={randomItem} alt={randomItem} height="500px" />
+    <div className="randomImage">
+      <img src={randomItem} alt={randomItem} />
+      <p className="randomItemTitle">{randomItemTitle}</p>
     </div>
   );
 }

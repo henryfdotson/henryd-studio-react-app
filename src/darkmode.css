@@ -2,6 +2,11 @@
   background-color: #333;
   color: #fff;
 }
+
+.dark a {
+  color: rgb(129, 209, 255);
+}
+
 .light {
   background-color: #fff;
   color: #333;
