@@ -17,6 +17,9 @@ function Navigation() {
           <Link to="/resume">Resume</Link>
         </Col>
         <Col>
+          <Link to="/ai-chatbot">Ai Chatbot</Link>
+        </Col>
+        <Col>
           <Link to="/contact">Contact</Link>
         </Col>
       </Row>
