@@ -14,10 +14,10 @@ function Navigation() {
           <Link to="/about">About</Link>
         </Col>
         <Col>
-          <Link to="/resume">Resume</Link>
+          <Link to="/ghost-game">Games</Link>
         </Col>
         <Col>
-          <Link to="/ai-chatbot">Ai Chatbot</Link>
+          <Link to="/resume">Resume</Link>
         </Col>
         <Col>
           <Link to="/contact">Contact</Link>

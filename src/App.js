@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Navigation from './components/Navigation';
 import About from './components/About';
 import Resume from './components/Resume';
-import AiChatbot from './components/AiChatbot';
+import GhostGame from './components/Game';
 import Contact from './components/Contact';
 import React, { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
@@ -46,8 +46,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/ghost-game" element={<GhostGame />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="/ai-chatbot" element={<AiChatbot />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
