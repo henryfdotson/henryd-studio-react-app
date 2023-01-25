@@ -5,6 +5,9 @@ import Navigation from './components/Navigation';
 import About from './components/About';
 import Resume from './components/Resume';
 import GhostGame from './components/Game';
+import Art from './components/Art';
+import Art3D from './components/Art3D';
+import Video from './components/Video';
 import Contact from './components/Contact';
 import React, { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
@@ -47,6 +50,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/ghost-game" element={<GhostGame />} />
+            <Route path="/art" element={<Art />} />
+            <Route path="/3d-art" element={<Art3D />} />
+            <Route path="/video" element={<Video />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

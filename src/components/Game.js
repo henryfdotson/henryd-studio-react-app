@@ -8,7 +8,8 @@ const ghostGameUrl = 'ghostGame/index.html';
 function GhostGame() {
   return (
     <div className="Game">
-      <h1>Ghosted: The Game</h1>
+      <h1>Games</h1>
+      <p>Presenting: Ghosted! A Gameboy RPG by Henry F. Dotson</p>
       <iframe title='Ghost Game' src={ghostGameUrl} width='500px'  height='500px'></iframe>
       <Accordion>
       <Accordion.Item eventKey="0">

@@ -7,9 +7,15 @@ import resumePDF from '../assets/henryfdotson_resume_2022.pdf';
 function Resume(){
   return(
     <Container className='resume-container'>
+      <h1>Resume</h1>
+      <p>Just a few things I've done.</p>
       <Row>
+        <Col sm={2}>
+        </Col>
         <Col>
-        <iframe className='resume-frame' src={resumePDF}></iframe>
+          <iframe className='resume-frame' src={resumePDF}></iframe>
+        </Col>
+        <Col sm={2}>
         </Col>
       </Row>
     </Container>

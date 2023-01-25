@@ -17,6 +17,15 @@ function Navigation() {
           <Link to="/ghost-game">Games</Link>
         </Col>
         <Col>
+          <Link to="/art">Art</Link>
+        </Col>
+        <Col>
+          <Link to="/3d-art">3D Art</Link>
+        </Col>
+        <Col>
+          <Link to="/video">Video</Link>
+        </Col>
+        <Col>
           <Link to="/resume">Resume</Link>
         </Col>
         <Col>

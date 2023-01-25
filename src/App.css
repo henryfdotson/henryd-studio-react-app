@@ -2,7 +2,12 @@
 
 html, body {
   height: 100%;
-  font-family:Garamond, Georgia, serif;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.homeTitle {
+  font-weight: bold;
+  font-style: italic;
 }
 
 li {
@@ -48,26 +53,29 @@ li {
   text-align: left;
 }
 
-.randomImage {
-    max-width: 60%;
-    margin: 0px auto;
-}
 .randomImage img {
-  max-width: 100%;
+  height: 40vh;
+  margin-top: 1em;
 }
 
-resume-container.container {
-  display: block;
-  height: 100vh;
+iframe.resume-frame {
+  width: 100%;
+  height: 90vh;
 }
-.resume-frame {
-  height: 100vh;
-  width: 75vh;
+
+.videoCards {
+  height: auto;
+  overflow: auto;
+}
+
+.videoCard {
+  display: inline-block;
+  margin: 1em;
 }
 
 .nav-Container {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 3em;
 }
 
 .footer {
