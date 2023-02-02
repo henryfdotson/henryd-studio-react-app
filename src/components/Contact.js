@@ -17,7 +17,8 @@ function Contact(){
             <ListGroup.Item action href="https://www.linkedin.com/in/henryfdotson/" target="_blank">LinkedIn</ListGroup.Item>
             <ListGroup.Item action href="https://instagram.com/henryfdotson" target="_blank">Instagram</ListGroup.Item>
             <ListGroup.Item action href="https://youtube.com/@henryfdotson" target="_blank">YouTube</ListGroup.Item>
-            <ListGroup.Item action href="https://twitter.com/henryfdotson" target="_blank">Twitter</ListGroup.Item> 
+            <ListGroup.Item action href="https://twitter.com/henryfdotson" target="_blank">Twitter</ListGroup.Item>
+            <ListGroup.Item action href="https://github.com/henryfdotson/" target="_blank">Github</ListGroup.Item>
           </ListGroup>
         </Col>
         <Col>

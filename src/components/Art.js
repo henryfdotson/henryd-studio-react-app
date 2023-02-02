@@ -1,10 +1,17 @@
+import Container from "react-bootstrap/esm/Container";
+import Row from "react-bootstrap/esm/Row";
+import ArtList from "./ArtList";
+
 function Art() {
-  return(
-    <div className='art'>
+  return (
+    <div className="art">
       <h1>Art</h1>
-      <p>Coming soon...</p>
+      <p>Selections from one piece of art every day. 2018-2022.</p>
+      <div className="artCards">
+        <ArtList />
+      </div>
     </div>
-  )
+  );
 }
 
 export default Art;

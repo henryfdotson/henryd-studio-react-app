@@ -8,7 +8,7 @@ function Resume(){
   return(
     <Container className='resume-container'>
       <h1>Resume</h1>
-      <p>Just a few things I've done.</p>
+      <p>A few things I've done.</p>
       <Row>
         <Col sm={2}>
         </Col>
