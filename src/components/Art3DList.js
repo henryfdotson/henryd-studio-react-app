@@ -1,67 +1,79 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import GltfModel from './GltfModel';
-
-const ModelViewer = ({ modelPath, scale = 40, position = [0, 0, 0] }) => {
-  return (
-    <Canvas>
-      <ambientLight intensity={0.3} />
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-      <pointLight position={[-10, -10, -10]} />
-      <Suspense fallback={null}>
-        <GltfModel modelPath={modelPath} scale={scale} position={position} />
-        <OrbitControls />
-      </Suspense>
-    </Canvas>
-  );
-};
+import Art3DModel from './Art3DModel';
 
 class Art3DList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      art3DListItems: [
+      modelList: [
         {
-          embedCode: '_eh-BO9_IHQ',
-          description: 'Philadelphia, PA to Atlantic City, NJ'
+          art3DURL: "/images/models/binary.glb",
+          description: "Binary"
         },
         {
-          embedCode: '-qpk2FAriLA',
-          description: 'Cape May, New Jersey'
+          art3DURL: "/images/models/cashflow.glb",
+          description: "Cashflow"
         },
         {
-          embedCode: '-XuNdhgF-IE',
-          description: 'Manhattan, New York City, NY'
+          art3DURL: "/images/models/dippybird.glb",
+          description: "Dippy Bird"
         },
         {
-          embedCode: 'X4mmli5SEZ4',
-          description: 'Washington, DC'
+          art3DURL: "/images/models/newdolphin.glb",
+          description: "Dolphin Rings"
         },
         {
-          embedCode: 'KQc-c2ZXSEc',
-          description: 'Madrid, España'
+          art3DURL: "/images/models/eruption.glb",
+          description: "Eruption"
         },
         {
-          embedCode: 'ZBJvEuhSWAE',
-          description: 'Barcelona, España'
+          art3DURL: "/images/models/goldbar.glb",
+          description: "Gold Bar"
         },
         {
-          embedCode: 'P254MlCNbIE',
-          description: 'Vermont, USA'
+          art3DURL: "/images/models/kandinsky.glb",
+          description: "Kandinsky"
         },
         {
-          embedCode: 'hVRnKvMArSM',
-          description: 'Nashville, Tennessee'
+          art3DURL: "/images/models/mousetrap.glb",
+          description: "Mouse Trap"
         },
         {
-          embedCode: '23j2ACefyaQ',
-          description: 'Zen and the Art of Gameboy Maintenance'
-        }
+          art3DURL: "/images/models/pain.glb",
+          description: "Pain"
+        },
+        {
+          art3DURL: "/images/models/sadface.glb",
+          description: "Sad Face"
+        },
+        {
+          art3DURL: "/images/models/theartistsstudio.glb",
+          description: "The Artist's Studio"
+        },
+        {
+          art3DURL: "/images/models/wearewatching.glb",
+          description: "We Are Watching"
+        },
+        {
+          art3DURL: "/images/models/whenlifegivesyoulemons.glb",
+          description: "When Life Gives You Lemons"
+        },
+        {
+          art3DURL: "/images/models/milk.glb",
+          description: "Best Friends"
+        },
+        {
+          art3DURL: "/images/models/ladybug.glb",
+          description: "Ladybug"
+        },
+        {
+          art3DURL: "/images/models/lobster.glb",
+          description: "Chef"
+        }      
       ]
     };
   }
@@ -69,26 +81,13 @@ class Art3DList extends React.Component {
   render() {
     return (
       <div>
-        {this.state.art3DListItems.map((art3DItem, index) => {
+        {this.state.modelList.map((artPiece3D, index) => {
           return (
-            <div>
-            <ModelViewer scale="40" modelPath={"../assets/models/milk.glb"} />
-            <p>Hellooooo world</p>
-            </div>
-
-
-              // <div className="videoCard" key={index}>
-              //     <iframe
-              //       width="427"
-              //       height="240"
-              //       src={`https://www.youtube.com/embed/${vid.embedCode}`}
-              //       frameBorder="0"
-              //       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              //       allowFullScreen
-              //       title="Embedded youtube"
-              //     />
-              //     <p>{vid.description}</p>
-              // </div>
+              <div className="art3DCard" key={index}>
+                  <Art3DModel modelURL={artPiece3D.art3DURL}
+                  />
+                  <p>{artPiece3D.description}</p>
+              </div>
           );
         })}
       </div>

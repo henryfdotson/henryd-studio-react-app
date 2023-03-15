@@ -7,7 +7,7 @@ function Contact(){
   return(
     <Container>
       <h1>Contact</h1>
-      <p>Feel free to reach out. Peace and love.</p>
+      <p>Feel free to reach out.</p>
       <Row>
         <Col>
         </Col>

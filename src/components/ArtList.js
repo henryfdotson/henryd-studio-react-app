@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+
+function ImageModal(props) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <div>
+      <img
+        height="400px"
+        src={props.artURL}
+        alt={`A work of art titled ${props.description} by Henry F. Dotson`}
+        onClick={handleShow}
+      />
+
+      <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header>
+          <Modal.Title>{props.description}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img
+            className="modalImage"
+            src={props.artURL}
+            alt={`A work of art titled ${props.description} by Henry F. Dotson`}
+          />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
+  );
+}
 
 class ArtList extends React.Component {
   constructor(props) {
@@ -1679,20 +1718,22 @@ class ArtList extends React.Component {
 
   render() {
     return (
+      <LazyLoadComponent>
       <div>
         {this.state.artList.reverse().map((artPiece, index) => {
           return (
               <div className="artCard" key={index}>
-                  <img
-                    height="400px"
-                    src={`/images/art/${artPiece.artURL}`}
-                    alt={`A work of art titled ${artPiece.description} by Henry F. Dotson`}
-                  />
+              <ImageModal
+                artURL={`/images/art/${artPiece.artURL}`}
+                description={artPiece.description}
+                className="artImage"
+              />
                   <p>{artPiece.description}</p>
               </div>
           );
         })}
       </div>
+      </LazyLoadComponent>
     );
   }
 }

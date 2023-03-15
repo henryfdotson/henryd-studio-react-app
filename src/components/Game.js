@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
 const ghostGameUrl = 'ghostGame/index.html';
 
 function GhostGame() {
@@ -11,9 +12,13 @@ function GhostGame() {
       <h1>Games</h1>
       <p>Presenting: Ghosted! A Gameboy RPG by Henry F. Dotson</p>
       <iframe title='Ghost Game' src={ghostGameUrl} width='500px'  height='500px'></iframe>
+      <p>Coming soon to Mac and PC.</p>
+      <p>Until then, please enjoy the game here in your browser!</p>
       <Accordion>
       <Accordion.Item eventKey="0">
-        <Accordion.Header>Controls:</Accordion.Header>
+        <Accordion.Header>
+          <Button>Controls:</Button>
+        </Accordion.Header>
         <Accordion.Body>
           <Container>
             <Row>
